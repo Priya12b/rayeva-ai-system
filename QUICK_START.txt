@@ -1,0 +1,94 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║                  RAYEVA AI SYSTEM - QUICK START (5 MINUTES)                  ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+TERMINAL 1 - BACKEND
+━━━━━━━━━━━━━━━━━━━━━
+cd backend
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+
+✓ Ready at: http://localhost:8000/docs
+
+---
+
+TERMINAL 2 - FRONTEND  
+━━━━━━━━━━━━━━━━━━━━━
+cd frontend
+npm install
+npm start
+
+✓ Ready at: http://localhost:3000
+
+---
+
+TERMINAL 3 - POPULATE DB
+━━━━━━━━━━━━━━━━━━━━━━━━
+cd backend
+python seed_db.py
+
+✓ Database has 10 sample products
+
+---
+
+TEST IT
+━━━━━━━━━━━━━━━━━━━━━━━━
+Option 1 - Swagger UI:
+  Open: http://localhost:8000/docs
+
+Option 2 - Demo Script:
+  python demo_api.py
+
+Option 3 - cURL:
+  curl -X POST http://localhost:8000/ai/generate-category \
+    -H "Content-Type: application/json" \
+    -d '{"name":"Bamboo Brush","description":"Eco toothbrush","material":"bamboo","base_price":12.99}'
+
+---
+
+FORMAT/STRUCTURE
+━━━━━━━━━━━━━━━━━━━━━━━━
+For evaluation, check:
+
+1. AI Prompts (Show understanding)
+   → backend/app/services/ai_service.py
+
+2. Database Logging (Audit trail)
+   → backend/app/models/ai_log.py
+   → sqlite3 backend/rayeva.db
+
+3. Architecture Docs
+   → README.md (main overview)
+   → ARCHITECTURE_MODULE_3.md (Impact Reporter)
+   → ARCHITECTURE_MODULE_4.md (WhatsApp Bot)
+
+4. Clean Code
+   → backend/app/routers/ (REST endpoints)
+   → backend/app/schemas/ (validation)
+   → backend/app/models/ (data models)
+
+---
+
+DEMO VIDEO TIPS
+━━━━━━━━━━━━━━━
+1. Show product → categories mapping (Module 1)
+2. Show budget + recommendation + cost breakdown (Module 2)  
+3. Show AI logs in database (proof of logging)
+4. Show architecture design (Modules 3 & 4)
+
+Total: 3-5 minutes
+
+---
+
+GITHUB SUBMISSION
+━━━━━━━━━━━━━━━━━━━━━━
+git init
+git add .
+git commit -m "Rayeva AI System - Sustainable Commerce"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/rayeva-ai-system
+git push -u origin main
+
+---
+
+Questions? Read README.md for full documentation.
