@@ -165,25 +165,32 @@ function ProposalForm() {
 
           <h3>Proposal Result</h3>
 
-          {result.suggested_products && (
+          {result.recommended_products && result.recommended_products.length > 0 && (
             <>
-              <p><b>Suggested Products:</b></p>
+              <p><b>Recommended Products:</b></p>
               <ul>
-                {result.suggested_products.map((item, index) => (
+                {result.recommended_products.map((item, index) => (
                   <li key={index}>
-                    {item.product_name} - Qty: {item.quantity} - Cost: {item.cost}
+                    {item.product_name} - Qty: {item.quantity} - Unit: ${item.unit_price} - Total: ${item.total_price.toFixed(2)}
                   </li>
                 ))}
               </ul>
             </>
           )}
 
-          <p><b>Total Cost:</b> {result.total_cost}</p>
+          <p><b>Total Cost:</b> ${result.total_cost.toFixed(2)}</p>
 
-          <p><b>Budget Remaining:</b> {result.budget_remaining}</p>
+          <p><b>Budget Remaining:</b> ${result.budget_remaining.toFixed(2)}</p>
 
           <p><b>Impact Summary:</b></p>
           <p>{result.impact_positioning_summary}</p>
+
+          {result.business_rationale && (
+            <>
+              <p><b>Business Rationale:</b></p>
+              <p>{result.business_rationale}</p>
+            </>
+          )}
 
         </div>
       )}

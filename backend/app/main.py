@@ -5,7 +5,9 @@ from app.models import product, proposal, ai_log
 import app.routers.category as category
 import app.routers.proposal as proposal_router
 import logging
+from app.database import init_db
 
+init_db()
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
