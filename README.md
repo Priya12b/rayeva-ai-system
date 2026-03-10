@@ -35,27 +35,27 @@ This submission demonstrates **structured AI integration with real business logi
 │              FastAPI Backend (Port 8000)                │
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
-│  ┌──────────────────────────────────────────────────┐  │
-│  │            AI Service Layer                      │  │
-│  │  - generate_category_tags()                      │  │
-│  │  - generate_proposal()                           │  │
-│  │  [Mock AI with deterministic logic]              │  │
-│  └──────────────────────────────────────────────────┘  │
+│  ┌──────────────────────────────────────────────────┐   │
+│  │            AI Service Layer                      │   │
+│  │  - generate_category_tags()                      │   │
+│  │  - generate_proposal()                           │   │
+│  │  [Mock AI with deterministic logic]              │   │
+│  └──────────────────────────────────────────────────┘   │
 │                        ↓                                │
-│  ┌──────────────────────────────────────────────────┐  │
-│  │         Business Logic & Validation               │  │
-│  │  - Category mapping (deterministic)               │  │
-│  │  - Budget optimization                           │  │
-│  │  - Sustainability filtering                      │  │
-│  └──────────────────────────────────────────────────┘  │
+│  ┌──────────────────────────────────────────────────┐   │
+│  │         Business Logic & Validation              │   │
+│  │  - Category mapping (deterministic)              │   │
+│  │  - Budget optimization                           │   │
+│  │  - Sustainability filtering                      │   │
+│  └──────────────────────────────────────────────────┘   │
 │                        ↓                                │
-│  ┌──────────────────────────────────────────────────┐  │
-│  │      SQLAlchemy ORM + SQLite Database            │  │
-│  │  - Products                                      │  │
-│  │  - Proposals                                     │  │
-│  │  - AI Logs (audit trail)                         │  │
-│  │  - [Future: ImpactReports, Conversations]        │  │
-│  └──────────────────────────────────────────────────┘  │
+│  ┌──────────────────────────────────────────────────┐   │
+│  │      SQLAlchemy ORM + SQLite Database            │   │
+│  │  - Products                                      │   │
+│  │  - Proposals                                     │   │
+│  │  - AI Logs (audit trail)                         │   │
+│  │  - [Future: ImpactReports, Conversations]        │   │
+│  └──────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────┘
           ↓                                    ↓
     ┌──────────────┐              ┌──────────────────┐
