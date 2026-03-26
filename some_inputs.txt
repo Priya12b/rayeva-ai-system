@@ -1,0 +1,51 @@
+cd frontend
+npm start
+
+
+d:\project\rayeva-ai-system\.vipts\Activate.ps1
+cd backend
+uvicorn app.main:app --reload
+
+
+
+Category Form inputs
+
+Product Name: Bamboo Toothbrush Set
+Description: Eco-friendly toothbrushes with compostable packaging, soft bristles, and zero-plastic design for daily oral care.
+Material: bamboo
+Base Price: 12.99
+
+Product Name: Recycled Steel Water Bottle
+Description: Durable insulated bottle for office and travel, reusable and vegan-friendly design.
+Material: recycled stainless steel
+Base Price: 35
+
+Product Name: Organic Cotton Tote Bag
+Description: Reusable shopping bag made from organic cotton, fair-trade production and natural dyes.
+Material: organic cotton
+Base Price: 18.5
+
+Product Name: Compostable Coffee Capsules
+Description: Plant-based coffee capsules, organic blend, compostable after use.
+Material: compostable bioplastic
+Base Price: 19.99
+
+
+
+Proposal Form inputs
+
+Client Type: hotel
+Budget: 500
+Sustainability Priority: High
+
+Client Type: retailer
+Budget: 1000
+Sustainability Priority: Medium
+
+Client Type: corporate
+Budget: 2500
+Sustainability Priority: High
+
+Client Type: office
+Budget: 700
+Sustainability Priority: Low
