@@ -5,7 +5,9 @@ from app.models import product, proposal, ai_log
 import app.routers.category as category
 import app.routers.proposal as proposal_router
 import logging
+import os
 from app.database import init_db
+from seed_db import seed_database
 
 init_db()
 # Configure logging
@@ -55,6 +57,14 @@ def root():
 async def startup_event():
     logger.info("🌱 Rayeva AI System starting up...")
     logger.info("📚 API Documentation: http://localhost:8000/docs")
+
+    auto_seed_enabled = os.getenv("AUTO_SEED_ON_STARTUP", "true").lower() == "true"
+    if auto_seed_enabled:
+        try:
+            seed_database(reset=False)
+            logger.info("✅ Auto-seed check completed")
+        except Exception as e:
+            logger.error(f"❌ Auto-seed failed: {e}")
 
 # Shutdown event
 @app.on_event("shutdown")

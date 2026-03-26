@@ -149,15 +149,27 @@ SAMPLE_LOGS = [
 ]
 
 
-def seed_database():
-    """Populate database with sample data"""
+def seed_database(reset=True):
+    """Populate database with sample data.
+
+    Args:
+        reset: If True, clear existing data before inserting samples.
+    """
     db = SessionLocal()
     
     try:
-        # Clear existing data (optional)
-        db.query(Product).delete()
-        db.query(AILog).delete()
-        db.commit()
+        existing_count = db.query(Product).count()
+
+        # For startup seeding on free hosting, avoid destructive reset by default.
+        if not reset and existing_count > 0:
+            print(f"✓ Seed skipped: database already has {existing_count} products")
+            return
+
+        if reset:
+            # Clear existing data (optional)
+            db.query(Product).delete()
+            db.query(AILog).delete()
+            db.commit()
         
         # Add products
         print("Adding sample products...")
@@ -194,4 +206,4 @@ def seed_database():
 
 
 if __name__ == "__main__":
-    seed_database()
+    seed_database(reset=True)
