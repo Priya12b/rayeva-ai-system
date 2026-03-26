@@ -8,3 +8,4 @@ products = session.query(Product).all()
 print(f'Total products: {len(products)}')
 for p in products:
     print(f'  - {p.name}: ${p.base_price}')
+session.close()

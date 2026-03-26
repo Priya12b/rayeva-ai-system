@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import API_BASE_URL from "../config";
 
 function CategoryForm() {
 
@@ -22,7 +23,7 @@ function CategoryForm() {
   const handleSubmit = async () => {
 
     const response = await axios.post(
-      "http://127.0.0.1:8000/ai/generate-category",
+      `${API_BASE_URL}/ai/generate-category`,
       form
     );
 

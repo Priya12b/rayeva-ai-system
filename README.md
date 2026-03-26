@@ -31,24 +31,24 @@ This submission demonstrates **structured AI integration with real business logi
 ### System Design
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│              FastAPI Backend (Port 8000)                │
-├─────────────────────────────────────────────────────────┤
-│                                                         │
+┌────────────────────────────────────────────────────────┐
+│              FastAPI Backend (Port 8000)               │
+├────────────────────────────────────────────────────────┤
+│                                                        │
 │  ┌──────────────────────────────────────────────────┐  │
 │  │            AI Service Layer                      │  │
-│  │  - generate_category_tags()                      │  │
+│  │  - generate_category_tags()                      │  │ 
 │  │  - generate_proposal()                           │  │
 │  │  [Mock AI with deterministic logic]              │  │
 │  └──────────────────────────────────────────────────┘  │
-│                        ↓                                │
+│                        ↓                               │
 │  ┌──────────────────────────────────────────────────┐  │
-│  │         Business Logic & Validation               │  │
-│  │  - Category mapping (deterministic)               │  │
+│  │         Business Logic & Validation              │  │
+│  │  - Category mapping (deterministic)              │  │
 │  │  - Budget optimization                           │  │
-│  │  - Sustainability filtering                      │  │
-│  └──────────────────────────────────────────────────┘  │
-│                        ↓                                │
+│  │  - Sustainability filtering                      │  │ 
+│  └──────────────────────────────────────────────────┘  │ 
+│                        ↓                               │
 │  ┌──────────────────────────────────────────────────┐  │
 │  │      SQLAlchemy ORM + SQLite Database            │  │
 │  │  - Products                                      │  │
@@ -56,7 +56,7 @@ This submission demonstrates **structured AI integration with real business logi
 │  │  - AI Logs (audit trail)                         │  │
 │  │  - [Future: ImpactReports, Conversations]        │  │
 │  └──────────────────────────────────────────────────┘  │
-└─────────────────────────────────────────────────────────┘
+└────────────────────────────────────────────────────────┘
           ↓                                    ↓
     ┌──────────────┐              ┌──────────────────┐
     │React Frontend│              │AI Audit Database │

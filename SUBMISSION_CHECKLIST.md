@@ -1,7 +1,5 @@
 # Submission Checklist - Rayeva AI System
 
-Use this checklist to verify your submission is complete and ready for evaluation.
-
 ## ✅ Code Quality
 
 - [x] **Python Style**
@@ -315,16 +313,16 @@ Features:
 "
 
 # Set up GitHub repository
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/rayeva-ai-system
-git push -u origin main
-```
+# git branch -M main
+# git remote add origin https://github.com/YOUR_USERNAME/rayeva-ai-system
+# git push -u origin main
+<!-- ``` -->
 
 ---
 
-## 📋 Final Verification
+<!-- ## 📋 Final Verification -->
 
-Before submitting, run through this checklist one final time:
+<!-- Before submitting, run through this checklist one final time:
 
 - [x] All files present and organized
 - [x] No secrets exposed (.env, API keys)
@@ -337,11 +335,11 @@ Before submitting, run through this checklist one final time:
 - [x] README explains everything clearly
 - [x] Ready for demo video recording
 
----
+--- -->
 
-## 🚀 Ready to Submit!
+<!-- ## 🚀 Ready to Submit! -->
 
-You're all set! Your submission includes:
+<!-- You're all set! Your submission includes:
 
 ✅ **2 Fully Implemented Modules** (Category + Proposal)
 ✅ **2 Architected Modules** (Impact + WhatsApp)  
@@ -357,4 +355,7 @@ You're all set! Your submission includes:
 
 ---
 
-Good luck! 🌱
+Good luck! 🌱 -->
+
+uvicorn main:app --reload
+npm start
